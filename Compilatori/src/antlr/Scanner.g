@@ -2,6 +2,7 @@ grammar Scanner;
 
 options {
   language = Java;
+  k=1;
 }
 
 @header{
@@ -15,20 +16,7 @@ options {
   public int myVar = 0;
 }
 
-DIGIT : '0'..'9';
-TASTO : '1'* DIGIT|
-'2'('0'..'4'); //range 0..24
 
-fragment LETTER : 'a'..'z'|'A'..'Z' ;
-fragment CORDA : '1'..'6';
-NOTE : 'A'..'G';
-
-
-STRING_LITERAL : '\''.*'\'';
-INTEGER : DIGIT+ ;
-IDENT : LETTER(LETTER | DIGIT)* ;
-
-WS : (' ' | '\t' | '\n' | '\r' | '\f')+  {$channel=HIDDEN;};
 
 
 bar :
@@ -36,7 +24,7 @@ bar :
 ;
 
 note :
-'NOTE' '(' NOTE ')'|
+//'NOTE' '(' NOTE ')'|
 'NOTE' '(' CORDA ',' TASTO ')'
 ;
 
@@ -54,12 +42,12 @@ strumming:
 
 slideup:
 'SLIDEUP' '(' CORDA ','  TASTO ',' TASTO ')'|
-'SLIDEUP' '(' CORDA ','  TASTO ')'
+//'SLIDEUP' '(' CORDA ','  TASTO ')'
 ;
 
 slidedown:
 'SLIDEDOWN' '(' CORDA ','  TASTO ',' TASTO ')'|
-'SLIDEDOWN' '(' CORDA ','  TASTO ')'
+//'SLIDEDOWN' '(' CORDA ','  TASTO ')'
 ;
 
 hammer:
@@ -69,3 +57,18 @@ hammer:
 pulloff:
 'pulloff' '(' CORDA ','  TASTO ',' TASTO ')'
 ;
+
+DIGIT : '0'..'9';
+TASTO : '1'* DIGIT|
+'2'('0'..'4'); //range 0..24
+
+fragment LETTER : 'a'..'z'|'A'..'Z' ;
+fragment CORDA : '1'..'6';
+NOTE : 'A'..'G';
+
+
+STRING_LITERAL : '\''.*'\'';
+INTEGER : DIGIT+ ;
+IDENT : LETTER(LETTER | DIGIT)* ;
+
+WS : (' ' | '\t' | '\n' | '\r' | '\f')+  {$channel=HIDDEN;};
