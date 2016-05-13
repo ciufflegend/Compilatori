@@ -16,46 +16,111 @@ options {
   public int myVar = 0;
 }
 
+@members {
+ArrayList<String> listaErrori = new ArrayList<String>();
+ArrayList<String> listaWarning = new ArrayList<String>();
 
+String path;
+Main principale;
 
-
+public void init(){
+  principale = new Main();
+  }
+  
+  public ArrayList<String> getListaErrori(){
+  return listaErrori;
+  }
+  
+  public int getNumeroErrori(){
+  return listaErrori.size();
+  }
+  
+ public ArrayList<String> getListaWarning(){
+  return listaWarning;
+  }
+  
+  public int getNumeroWarning(){
+  return listaWarning.size();
+  }
+  
+  public void setOutputPath(String p){
+  this.path =p;
+  }
+  
+  }
+  
 bar :
-'BAR' '(' DIGIT '/' DIGIT ')'
+'BAR' '(' a=DIGIT 
+{a=$a;
+
+
+}'/' b=DIGIT{
+b=$b;
+principale.setBattuta(a,b);
+
+} ')'
 ;
 
 note :
 //'NOTE' '(' NOTE ')'|
-'NOTE' '(' CORDA ',' TASTO ')'
+'NOTE' '(' c=CORDA ',' t=TASTO ')'
+{
+principale.writeNota(c,t);
+}
 ;
 
 chord :
-'CHORD' '(' NOTE ')'
+'CHORD' '(' n=NOTE ')'
+{
+principale.writeChord(n);
+}
 ;
 
 powerchord:
-'POWERCHORD' '(' NOTE ')'
+'POWERCHORD' '(' n=NOTE ')'
+{
+principale.writePowerchord(n);
+}
 ;
 
 strumming:
-'STRUMMING' '(' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ')'
+'STRUMMING' '('
+a=TASTO ',' b=TASTO ','
+c=TASTO ',' d=TASTO ','
+e=TASTO ',' f=TASTO ')'
+{
+principale.writeStrumming(a,b,c,d,e,f);
+}
 ;
 
 slideup:
-'SLIDEUP' '(' CORDA ','  TASTO ',' TASTO ')'|
+'SLIDEUP' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 //'SLIDEUP' '(' CORDA ','  TASTO ')'
+{
+principale.writeSlideup(c, t1, t2);
+}
 ;
 
 slidedown:
-'SLIDEDOWN' '(' CORDA ','  TASTO ',' TASTO ')'|
+'SLIDEDOWN' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 //'SLIDEDOWN' '(' CORDA ','  TASTO ')'
+{
+principale.writeSlideDown(c, t1 , t2);
+}
 ;
 
 hammer:
-'HAMMER' '(' CORDA ','  TASTO ',' TASTO ')'
+'HAMMER' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
+{
+principale.writeHammer(c, t1, t2);
+}
 ;
 
 pulloff:
-'pulloff' '(' CORDA ','  TASTO ',' TASTO ')'
+'pulloff' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
+{
+principale.writePulloff(c, t1, t2);
+}
 ;
 
 DIGIT : '0'..'9';

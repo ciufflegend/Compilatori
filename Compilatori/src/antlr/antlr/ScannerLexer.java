@@ -1,6 +1,4 @@
-package antlr.antlr;
-
-// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\antlr\\Scanner.g 2016-05-13 11:02:08
+// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g 2016-05-13 15:54:44
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -350,7 +348,7 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = DIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:61:7: ( '0' .. '9' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:126:7: ( '0' .. '9' )
             // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -379,7 +377,7 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = TASTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:62:7: ( ( '1' )* DIGIT | '2' ( '0' .. '4' ) )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:127:7: ( ( '1' )* DIGIT | '2' ( '0' .. '4' ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -405,9 +403,9 @@ public class ScannerLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:62:9: ( '1' )* DIGIT
+                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:127:9: ( '1' )* DIGIT
                     {
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:62:9: ( '1' )*
+                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:127:9: ( '1' )*
                     loop1:
                     do {
                         int alt1=2;
@@ -426,7 +424,7 @@ public class ScannerLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:62:9: '1'
+                    	    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:127:9: '1'
                     	    {
                     	    match('1'); 
 
@@ -445,7 +443,7 @@ public class ScannerLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:63:1: '2' ( '0' .. '4' )
+                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:128:1: '2' ( '0' .. '4' )
                     {
                     match('2'); 
 
@@ -475,7 +473,7 @@ public class ScannerLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:65:17: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:130:17: ( 'a' .. 'z' | 'A' .. 'Z' )
             // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -501,7 +499,7 @@ public class ScannerLexer extends Lexer {
     // $ANTLR start "CORDA"
     public final void mCORDA() throws RecognitionException {
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:66:16: ( '1' .. '6' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:131:16: ( '1' .. '6' )
             // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:
             {
             if ( (input.LA(1) >= '1' && input.LA(1) <= '6') ) {
@@ -529,7 +527,7 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = NOTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:67:6: ( 'A' .. 'G' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:132:6: ( 'A' .. 'G' )
             // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'G') ) {
@@ -558,12 +556,12 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:70:16: ( '\\'' ( . )* '\\'' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:70:18: '\\'' ( . )* '\\''
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:135:16: ( '\\'' ( . )* '\\'' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:135:18: '\\'' ( . )* '\\''
             {
             match('\''); 
 
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:70:22: ( . )*
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:135:22: ( . )*
             loop3:
             do {
                 int alt3=2;
@@ -579,7 +577,7 @@ public class ScannerLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:70:22: .
+            	    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:135:22: .
             	    {
             	    matchAny(); 
 
@@ -610,10 +608,10 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:71:9: ( ( DIGIT )+ )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:71:11: ( DIGIT )+
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:136:9: ( ( DIGIT )+ )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:136:11: ( DIGIT )+
             {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:71:11: ( DIGIT )+
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:136:11: ( DIGIT )+
             int cnt4=0;
             loop4:
             do {
@@ -668,13 +666,13 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:72:7: ( LETTER ( LETTER | DIGIT )* )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:72:9: LETTER ( LETTER | DIGIT )*
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:137:7: ( LETTER ( LETTER | DIGIT )* )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:137:9: LETTER ( LETTER | DIGIT )*
             {
             mLETTER(); 
 
 
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:72:15: ( LETTER | DIGIT )*
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:137:15: ( LETTER | DIGIT )*
             loop5:
             do {
                 int alt5=2;
@@ -724,10 +722,10 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:74:4: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:74:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:139:4: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:139:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:74:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:139:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             int cnt6=0;
             loop6:
             do {

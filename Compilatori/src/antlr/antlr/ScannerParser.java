@@ -1,6 +1,6 @@
-// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g 2016-05-13 11:02:08
+// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g 2016-05-13 15:54:43
 
-    package antlr.antlr;
+    package antlr;
  
 
 import org.antlr.runtime.*;
@@ -57,25 +57,71 @@ public class ScannerParser extends Parser {
     public String getGrammarFileName() { return "C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g"; }
 
 
+    ArrayList<String> listaErrori = new ArrayList<String>();
+    ArrayList<String> listaWarning = new ArrayList<String>();
+
+    String path;
+    Main principale;
+
+    public void init(){
+      principale = new Main();
+      }
+      
+      public ArrayList<String> getListaErrori(){
+      return listaErrori;
+      }
+      
+      public int getNumeroErrori(){
+      return listaErrori.size();
+      }
+      
+     public ArrayList<String> getListaWarning(){
+      return listaWarning;
+      }
+      
+      public int getNumeroWarning(){
+      return listaWarning.size();
+      }
+      
+      public void setOutputPath(String p){
+      this.path =p;
+      }
+      
+      
+
 
     // $ANTLR start "bar"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:22:1: bar : 'BAR' '(' DIGIT '/' DIGIT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:52:1: bar : 'BAR' '(' a= DIGIT '/' b= DIGIT ')' ;
     public final void bar() throws RecognitionException {
+        Token a=null;
+        Token b=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:22:5: ( 'BAR' '(' DIGIT '/' DIGIT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:23:1: 'BAR' '(' DIGIT '/' DIGIT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:52:5: ( 'BAR' '(' a= DIGIT '/' b= DIGIT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:53:1: 'BAR' '(' a= DIGIT '/' b= DIGIT ')'
             {
-            match(input,17,FOLLOW_17_in_bar47); 
+            match(input,17,FOLLOW_17_in_bar52); 
 
-            match(input,13,FOLLOW_13_in_bar49); 
+            match(input,13,FOLLOW_13_in_bar54); 
 
-            match(input,DIGIT,FOLLOW_DIGIT_in_bar51); 
+            a=(Token)match(input,DIGIT,FOLLOW_DIGIT_in_bar58); 
 
-            match(input,16,FOLLOW_16_in_bar53); 
+            a=a;
 
-            match(input,DIGIT,FOLLOW_DIGIT_in_bar55); 
 
-            match(input,14,FOLLOW_14_in_bar57); 
+
+
+            match(input,16,FOLLOW_16_in_bar62); 
+
+            b=(Token)match(input,DIGIT,FOLLOW_DIGIT_in_bar66); 
+
+
+            b=b;
+            principale.setBattuta(a,b);
+
+
+
+            match(input,14,FOLLOW_14_in_bar69); 
 
             }
 
@@ -95,23 +141,30 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "note"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:26:1: note : 'NOTE' '(' CORDA ',' TASTO ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:64:1: note : 'NOTE' '(' c= CORDA ',' t= TASTO ')' ;
     public final void note() throws RecognitionException {
+        Token c=null;
+        Token t=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:26:6: ( 'NOTE' '(' CORDA ',' TASTO ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:28:1: 'NOTE' '(' CORDA ',' TASTO ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:64:6: ( 'NOTE' '(' c= CORDA ',' t= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:66:1: 'NOTE' '(' c= CORDA ',' t= TASTO ')'
             {
-            match(input,20,FOLLOW_20_in_note67); 
+            match(input,20,FOLLOW_20_in_note79); 
 
-            match(input,13,FOLLOW_13_in_note69); 
+            match(input,13,FOLLOW_13_in_note81); 
 
-            match(input,CORDA,FOLLOW_CORDA_in_note71); 
+            c=(Token)match(input,CORDA,FOLLOW_CORDA_in_note85); 
 
-            match(input,15,FOLLOW_15_in_note73); 
+            match(input,15,FOLLOW_15_in_note87); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_note75); 
+            t=(Token)match(input,TASTO,FOLLOW_TASTO_in_note91); 
 
-            match(input,14,FOLLOW_14_in_note77); 
+            match(input,14,FOLLOW_14_in_note93); 
+
+
+            principale.writeNota(c,t);
+
 
             }
 
@@ -131,19 +184,25 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "chord"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:31:1: chord : 'CHORD' '(' NOTE ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:72:1: chord : 'CHORD' '(' n= NOTE ')' ;
     public final void chord() throws RecognitionException {
+        Token n=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:31:7: ( 'CHORD' '(' NOTE ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:32:1: 'CHORD' '(' NOTE ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:72:7: ( 'CHORD' '(' n= NOTE ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:73:1: 'CHORD' '(' n= NOTE ')'
             {
-            match(input,18,FOLLOW_18_in_chord86); 
+            match(input,18,FOLLOW_18_in_chord104); 
 
-            match(input,13,FOLLOW_13_in_chord88); 
+            match(input,13,FOLLOW_13_in_chord106); 
 
-            match(input,NOTE,FOLLOW_NOTE_in_chord90); 
+            n=(Token)match(input,NOTE,FOLLOW_NOTE_in_chord110); 
 
-            match(input,14,FOLLOW_14_in_chord92); 
+            match(input,14,FOLLOW_14_in_chord112); 
+
+
+            principale.writeChord(n);
+
 
             }
 
@@ -163,19 +222,25 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "powerchord"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:35:1: powerchord : 'POWERCHORD' '(' NOTE ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:79:1: powerchord : 'POWERCHORD' '(' n= NOTE ')' ;
     public final void powerchord() throws RecognitionException {
+        Token n=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:35:11: ( 'POWERCHORD' '(' NOTE ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:36:1: 'POWERCHORD' '(' NOTE ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:79:11: ( 'POWERCHORD' '(' n= NOTE ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:80:1: 'POWERCHORD' '(' n= NOTE ')'
             {
-            match(input,21,FOLLOW_21_in_powerchord100); 
+            match(input,21,FOLLOW_21_in_powerchord122); 
 
-            match(input,13,FOLLOW_13_in_powerchord102); 
+            match(input,13,FOLLOW_13_in_powerchord124); 
 
-            match(input,NOTE,FOLLOW_NOTE_in_powerchord104); 
+            n=(Token)match(input,NOTE,FOLLOW_NOTE_in_powerchord128); 
 
-            match(input,14,FOLLOW_14_in_powerchord106); 
+            match(input,14,FOLLOW_14_in_powerchord130); 
+
+
+            principale.writePowerchord(n);
+
 
             }
 
@@ -195,39 +260,50 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "strumming"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:39:1: strumming : 'STRUMMING' '(' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:86:1: strumming : 'STRUMMING' '(' a= TASTO ',' b= TASTO ',' c= TASTO ',' d= TASTO ',' e= TASTO ',' f= TASTO ')' ;
     public final void strumming() throws RecognitionException {
+        Token a=null;
+        Token b=null;
+        Token c=null;
+        Token d=null;
+        Token e=null;
+        Token f=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:39:10: ( 'STRUMMING' '(' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:40:1: 'STRUMMING' '(' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ',' TASTO ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:86:10: ( 'STRUMMING' '(' a= TASTO ',' b= TASTO ',' c= TASTO ',' d= TASTO ',' e= TASTO ',' f= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:87:1: 'STRUMMING' '(' a= TASTO ',' b= TASTO ',' c= TASTO ',' d= TASTO ',' e= TASTO ',' f= TASTO ')'
             {
-            match(input,24,FOLLOW_24_in_strumming114); 
+            match(input,24,FOLLOW_24_in_strumming140); 
 
-            match(input,13,FOLLOW_13_in_strumming116); 
+            match(input,13,FOLLOW_13_in_strumming142); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming118); 
+            a=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming146); 
 
-            match(input,15,FOLLOW_15_in_strumming120); 
+            match(input,15,FOLLOW_15_in_strumming148); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming122); 
+            b=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming152); 
 
-            match(input,15,FOLLOW_15_in_strumming124); 
+            match(input,15,FOLLOW_15_in_strumming154); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming126); 
+            c=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming158); 
 
-            match(input,15,FOLLOW_15_in_strumming128); 
+            match(input,15,FOLLOW_15_in_strumming160); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming130); 
+            d=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming164); 
 
-            match(input,15,FOLLOW_15_in_strumming132); 
+            match(input,15,FOLLOW_15_in_strumming166); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming134); 
+            e=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming170); 
 
-            match(input,15,FOLLOW_15_in_strumming136); 
+            match(input,15,FOLLOW_15_in_strumming172); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_strumming138); 
+            f=(Token)match(input,TASTO,FOLLOW_TASTO_in_strumming176); 
 
-            match(input,14,FOLLOW_14_in_strumming140); 
+            match(input,14,FOLLOW_14_in_strumming178); 
+
+
+            principale.writeStrumming(a,b,c,d,e,f);
+
 
             }
 
@@ -247,55 +323,38 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "slideup"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:43:1: slideup : ( 'SLIDEUP' '(' CORDA ',' TASTO ',' TASTO ')' |);
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:96:1: slideup : 'SLIDEUP' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' ;
     public final void slideup() throws RecognitionException {
+        Token c=null;
+        Token t1=null;
+        Token t2=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:43:8: ( 'SLIDEUP' '(' CORDA ',' TASTO ',' TASTO ')' |)
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:96:8: ( 'SLIDEUP' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:97:1: 'SLIDEUP' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')'
+            {
+            match(input,23,FOLLOW_23_in_slideup188); 
 
-            if ( (LA1_0==23) ) {
-                alt1=1;
-            }
-            else if ( (LA1_0==EOF) ) {
-                alt1=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
+            match(input,13,FOLLOW_13_in_slideup190); 
 
-                throw nvae;
+            c=(Token)match(input,CORDA,FOLLOW_CORDA_in_slideup194); 
 
-            }
-            switch (alt1) {
-                case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:44:1: 'SLIDEUP' '(' CORDA ',' TASTO ',' TASTO ')'
-                    {
-                    match(input,23,FOLLOW_23_in_slideup148); 
+            match(input,15,FOLLOW_15_in_slideup196); 
 
-                    match(input,13,FOLLOW_13_in_slideup150); 
+            t1=(Token)match(input,TASTO,FOLLOW_TASTO_in_slideup201); 
 
-                    match(input,CORDA,FOLLOW_CORDA_in_slideup152); 
+            match(input,15,FOLLOW_15_in_slideup203); 
 
-                    match(input,15,FOLLOW_15_in_slideup154); 
+            t2=(Token)match(input,TASTO,FOLLOW_TASTO_in_slideup207); 
 
-                    match(input,TASTO,FOLLOW_TASTO_in_slideup157); 
+            match(input,14,FOLLOW_14_in_slideup209); 
 
-                    match(input,15,FOLLOW_15_in_slideup159); 
 
-                    match(input,TASTO,FOLLOW_TASTO_in_slideup161); 
+            principale.writeSlideup(c, t1, t2);
 
-                    match(input,14,FOLLOW_14_in_slideup163); 
-
-                    }
-                    break;
-                case 2 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:46:45: 
-                    {
-                    }
-                    break;
 
             }
+
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -312,55 +371,38 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "slidedown"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:48:1: slidedown : ( 'SLIDEDOWN' '(' CORDA ',' TASTO ',' TASTO ')' |);
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:104:1: slidedown : 'SLIDEDOWN' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' ;
     public final void slidedown() throws RecognitionException {
+        Token c=null;
+        Token t1=null;
+        Token t2=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:48:10: ( 'SLIDEDOWN' '(' CORDA ',' TASTO ',' TASTO ')' |)
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:104:10: ( 'SLIDEDOWN' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:105:1: 'SLIDEDOWN' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')'
+            {
+            match(input,22,FOLLOW_22_in_slidedown220); 
 
-            if ( (LA2_0==22) ) {
-                alt2=1;
-            }
-            else if ( (LA2_0==EOF) ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+            match(input,13,FOLLOW_13_in_slidedown222); 
 
-                throw nvae;
+            c=(Token)match(input,CORDA,FOLLOW_CORDA_in_slidedown226); 
 
-            }
-            switch (alt2) {
-                case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:49:1: 'SLIDEDOWN' '(' CORDA ',' TASTO ',' TASTO ')'
-                    {
-                    match(input,22,FOLLOW_22_in_slidedown173); 
+            match(input,15,FOLLOW_15_in_slidedown228); 
 
-                    match(input,13,FOLLOW_13_in_slidedown175); 
+            t1=(Token)match(input,TASTO,FOLLOW_TASTO_in_slidedown233); 
 
-                    match(input,CORDA,FOLLOW_CORDA_in_slidedown177); 
+            match(input,15,FOLLOW_15_in_slidedown235); 
 
-                    match(input,15,FOLLOW_15_in_slidedown179); 
+            t2=(Token)match(input,TASTO,FOLLOW_TASTO_in_slidedown239); 
 
-                    match(input,TASTO,FOLLOW_TASTO_in_slidedown182); 
+            match(input,14,FOLLOW_14_in_slidedown241); 
 
-                    match(input,15,FOLLOW_15_in_slidedown184); 
 
-                    match(input,TASTO,FOLLOW_TASTO_in_slidedown186); 
+            principale.writeSlideDown(c, t1 , t2);
 
-                    match(input,14,FOLLOW_14_in_slidedown188); 
-
-                    }
-                    break;
-                case 2 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:51:47: 
-                    {
-                    }
-                    break;
 
             }
+
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -377,27 +419,35 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "hammer"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:53:1: hammer : 'HAMMER' '(' CORDA ',' TASTO ',' TASTO ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:112:1: hammer : 'HAMMER' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' ;
     public final void hammer() throws RecognitionException {
+        Token c=null;
+        Token t1=null;
+        Token t2=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:53:7: ( 'HAMMER' '(' CORDA ',' TASTO ',' TASTO ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:54:1: 'HAMMER' '(' CORDA ',' TASTO ',' TASTO ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:112:7: ( 'HAMMER' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:113:1: 'HAMMER' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')'
             {
-            match(input,19,FOLLOW_19_in_hammer198); 
+            match(input,19,FOLLOW_19_in_hammer252); 
 
-            match(input,13,FOLLOW_13_in_hammer200); 
+            match(input,13,FOLLOW_13_in_hammer254); 
 
-            match(input,CORDA,FOLLOW_CORDA_in_hammer202); 
+            c=(Token)match(input,CORDA,FOLLOW_CORDA_in_hammer258); 
 
-            match(input,15,FOLLOW_15_in_hammer204); 
+            match(input,15,FOLLOW_15_in_hammer260); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_hammer207); 
+            t1=(Token)match(input,TASTO,FOLLOW_TASTO_in_hammer265); 
 
-            match(input,15,FOLLOW_15_in_hammer209); 
+            match(input,15,FOLLOW_15_in_hammer267); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_hammer211); 
+            t2=(Token)match(input,TASTO,FOLLOW_TASTO_in_hammer271); 
 
-            match(input,14,FOLLOW_14_in_hammer213); 
+            match(input,14,FOLLOW_14_in_hammer273); 
+
+
+            principale.writeHammer(c, t1, t2);
+
 
             }
 
@@ -417,27 +467,35 @@ public class ScannerParser extends Parser {
 
 
     // $ANTLR start "pulloff"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:57:1: pulloff : 'pulloff' '(' CORDA ',' TASTO ',' TASTO ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:119:1: pulloff : 'pulloff' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' ;
     public final void pulloff() throws RecognitionException {
+        Token c=null;
+        Token t1=null;
+        Token t2=null;
+
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:57:8: ( 'pulloff' '(' CORDA ',' TASTO ',' TASTO ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:58:1: 'pulloff' '(' CORDA ',' TASTO ',' TASTO ')'
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:119:8: ( 'pulloff' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\antlr\\Scanner.g:120:1: 'pulloff' '(' c= CORDA ',' t1= TASTO ',' t2= TASTO ')'
             {
-            match(input,25,FOLLOW_25_in_pulloff221); 
+            match(input,25,FOLLOW_25_in_pulloff283); 
 
-            match(input,13,FOLLOW_13_in_pulloff223); 
+            match(input,13,FOLLOW_13_in_pulloff285); 
 
-            match(input,CORDA,FOLLOW_CORDA_in_pulloff225); 
+            c=(Token)match(input,CORDA,FOLLOW_CORDA_in_pulloff289); 
 
-            match(input,15,FOLLOW_15_in_pulloff227); 
+            match(input,15,FOLLOW_15_in_pulloff291); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_pulloff230); 
+            t1=(Token)match(input,TASTO,FOLLOW_TASTO_in_pulloff296); 
 
-            match(input,15,FOLLOW_15_in_pulloff232); 
+            match(input,15,FOLLOW_15_in_pulloff298); 
 
-            match(input,TASTO,FOLLOW_TASTO_in_pulloff234); 
+            t2=(Token)match(input,TASTO,FOLLOW_TASTO_in_pulloff302); 
 
-            match(input,14,FOLLOW_14_in_pulloff236); 
+            match(input,14,FOLLOW_14_in_pulloff304); 
+
+
+            principale.writePulloff(c, t1, t2);
+
 
             }
 
@@ -459,71 +517,71 @@ public class ScannerParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_17_in_bar47 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_bar49 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_DIGIT_in_bar51 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_bar53 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_DIGIT_in_bar55 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_bar57 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_note67 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_note69 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CORDA_in_note71 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_note73 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_note75 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_note77 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_chord86 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_chord88 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_NOTE_in_chord90 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_chord92 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_powerchord100 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_powerchord102 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_NOTE_in_powerchord104 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_powerchord106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_strumming114 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_strumming116 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming118 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_strumming120 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming122 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_strumming124 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming126 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_strumming128 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming130 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_strumming132 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming134 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_strumming136 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_strumming138 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_strumming140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_slideup148 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_slideup150 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CORDA_in_slideup152 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_slideup154 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_slideup157 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_slideup159 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_slideup161 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_slideup163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_slidedown173 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_slidedown175 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CORDA_in_slidedown177 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_slidedown179 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_slidedown182 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_slidedown184 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_slidedown186 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_slidedown188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_hammer198 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_hammer200 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CORDA_in_hammer202 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_hammer204 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_hammer207 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_hammer209 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_hammer211 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_hammer213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_pulloff221 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_pulloff223 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CORDA_in_pulloff225 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_pulloff227 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_pulloff230 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_pulloff232 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_TASTO_in_pulloff234 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_pulloff236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_bar52 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_bar54 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_DIGIT_in_bar58 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_bar62 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_DIGIT_in_bar66 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_bar69 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_note79 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_note81 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CORDA_in_note85 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_note87 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_note91 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_note93 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_chord104 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_chord106 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_NOTE_in_chord110 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_chord112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_powerchord122 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_powerchord124 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_NOTE_in_powerchord128 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_powerchord130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_strumming140 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_strumming142 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming146 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_strumming148 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming152 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_strumming154 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming158 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_strumming160 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming164 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_strumming166 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming170 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_strumming172 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_strumming176 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_strumming178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_slideup188 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_slideup190 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CORDA_in_slideup194 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_slideup196 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_slideup201 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_slideup203 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_slideup207 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_slideup209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_slidedown220 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_slidedown222 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CORDA_in_slidedown226 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_slidedown228 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_slidedown233 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_slidedown235 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_slidedown239 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_slidedown241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_hammer252 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_hammer254 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CORDA_in_hammer258 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_hammer260 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_hammer265 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_hammer267 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_hammer271 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_hammer273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_pulloff283 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_pulloff285 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CORDA_in_pulloff289 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_pulloff291 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_pulloff296 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_pulloff298 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_TASTO_in_pulloff302 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_pulloff304 = new BitSet(new long[]{0x0000000000000002L});
 
 }
