@@ -20,12 +20,8 @@ options {
 ArrayList<String> listaErrori = new ArrayList<String>();
 ArrayList<String> listaWarning = new ArrayList<String>();
 
-String path;
-Main principale;
-
-public void init(){
-  principale = new Main();
-  }
+Main principale = new Main();
+  
   
   public ArrayList<String> getListaErrori(){
   return listaErrori;
@@ -43,21 +39,12 @@ public void init(){
   return listaWarning.size();
   }
   
-  public void setOutputPath(String p){
-  this.path =p;
-  }
-  
   }
   
 bar :
 'BAR' '(' a=DIGIT 
-{a=$a;
-
-
-}'/' b=DIGIT{
-b=$b;
-principale.setBattuta(a,b);
-
+'/' b=DIGIT{
+principale.setBattuta($a,$b);
 } ')'
 ;
 
@@ -65,21 +52,20 @@ note :
 //'NOTE' '(' NOTE ')'|
 'NOTE' '(' c=CORDA ',' t=TASTO ')'
 {
-principale.writeNota(c,t);
+principale.writeNota($c,$t);
 }
 ;
-
-chord :
+chord:
 'CHORD' '(' n=NOTE ')'
 {
-principale.writeChord(n);
+principale.writeChord($n);
 }
 ;
 
 powerchord:
 'POWERCHORD' '(' n=NOTE ')'
 {
-principale.writePowerchord(n);
+principale.writePowerchord($n);
 }
 ;
 
@@ -89,7 +75,7 @@ a=TASTO ',' b=TASTO ','
 c=TASTO ',' d=TASTO ','
 e=TASTO ',' f=TASTO ')'
 {
-principale.writeStrumming(a,b,c,d,e,f);
+principale.writeStrumming($a,$b,$c,$d,$e,$f);
 }
 ;
 
@@ -97,7 +83,7 @@ slideup:
 'SLIDEUP' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 //'SLIDEUP' '(' CORDA ','  TASTO ')'
 {
-principale.writeSlideup(c, t1, t2);
+principale.writeSlideup($c, $t1, $t2);
 }
 ;
 
@@ -105,21 +91,21 @@ slidedown:
 'SLIDEDOWN' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 //'SLIDEDOWN' '(' CORDA ','  TASTO ')'
 {
-principale.writeSlideDown(c, t1 , t2);
+principale.writeSlidedown($c, $t1 , $t2);
 }
 ;
 
 hammer:
 'HAMMER' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 {
-principale.writeHammer(c, t1, t2);
+principale.writeHammer($c, $t1, $t2);
 }
 ;
 
 pulloff:
 'pulloff' '(' c=CORDA ','  t1=TASTO ',' t2=TASTO ')'
 {
-principale.writePulloff(c, t1, t2);
+principale.writePulloff($c, $t1, $t2);
 }
 ;
 

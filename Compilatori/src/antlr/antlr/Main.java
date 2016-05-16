@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 public class Main {
@@ -12,8 +13,8 @@ public class Main {
 	public int a;
 	public int b;
 	public int count = 0;
-
-	public Path path;
+	
+	String fileOut = ".\\src\\resources\\output.txt";
 
 	public Main() {
 
@@ -23,7 +24,7 @@ public class Main {
 
 		// ReadFile file = new ReadFile(path);
 		try {
-			List<String> lines = Files.readAllLines(path);
+			List<String> lines = Files.readAllLines(Paths.get(fileOut));
 
 			lines.set(0, lines.get(0) + a);
 			lines.set(1, lines.get(1) + b);
@@ -32,7 +33,7 @@ public class Main {
 			lines.set(4, lines.get(4) + e);
 			lines.set(5, lines.get(5) + f);
 
-			Files.write(path, lines);
+			Files.write(Paths.get(fileOut), lines);
 
 			if (count == a) {
 				for (int i = 0; i < 6; i++) {
@@ -57,7 +58,7 @@ public class Main {
 		}
 		// ReadFile file = new ReadFile(path);
 		try {
-			List<String> lines = Files.readAllLines(path);
+			List<String> lines = Files.readAllLines(Paths.get(fileOut));
 
 			if (count == a) {
 				for (int i = 0; i < 6; i++) {
@@ -73,7 +74,7 @@ public class Main {
 			lines.set(4, lines.get(4) + e);
 			lines.set(5, lines.get(5) + f);
 
-			Files.write(path, lines);
+			Files.write(Paths.get(fileOut), lines);
 
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block

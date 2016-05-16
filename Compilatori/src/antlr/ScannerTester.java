@@ -7,6 +7,7 @@ import java.util.Scanner;
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.Token;
 
+import antlr.antlr.Main;
 import antlr.antlr.ScannerLexer;
 
 public class ScannerTester {
@@ -34,6 +35,9 @@ public class ScannerTester {
 			System.out.println ("Test ANTLR abortito");
 			e.printStackTrace();
 		}
+		
+		Main test = new Main();
+		test.write('a', 'b', 'c', 'd', 'e', 'f');
 
 /*		try {
 			System.out.println ("Test JFLEX lexer");
