@@ -1,0 +1,36 @@
+2:(1,0)	TokenType:20:	NOTE
+4:(1,4)	TokenType:13:	(
+6:(1,5)	TokenType:5:	3
+8:(1,6)	TokenType:15:	,
+10:(1,7)	TokenType:5:	3
+12:(1,8)	TokenType:14:	)
+14:(1,9)	TokenType:12:	
+
+16:(2,0)	TokenType:23:	SLIDEUP
+18:(2,7)	TokenType:13:	(
+20:(2,8)	TokenType:5:	1
+22:(2,9)	TokenType:15:	,
+24:(2,10)	TokenType:5:	0
+26:(2,11)	TokenType:15:	,
+28:(2,12)	TokenType:11:	22
+30:(2,14)	TokenType:14:	)
+32:(2,15)	TokenType:12:	
+
+34:(3,0)	TokenType:24:	STRUMMING
+36:(3,9)	TokenType:13:	(
+38:(3,10)	TokenType:5:	3
+40:(3,11)	TokenType:15:	,
+42:(3,12)	TokenType:5:	2
+44:(3,13)	TokenType:15:	,
+46:(3,14)	TokenType:5:	1
+48:(3,15)	TokenType:15:	,
+50:(3,16)	TokenType:5:	1
+52:(3,17)	TokenType:15:	,
+54:(3,18)	TokenType:5:	0
+56:(3,19)	TokenType:14:	)
+58:(3,20)	TokenType:12:	
+
+60:(4,0)	TokenType:18:	CHORD
+62:(4,5)	TokenType:13:	(
+64:(4,6)	TokenType:9:	E
+66:(4,7)	TokenType:14:	)

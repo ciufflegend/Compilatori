@@ -1,11 +1,10 @@
-package antlr.antlr;
+package antlr;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -13,10 +12,67 @@ public class Main {
 	public int a;
 	public int b;
 	public int count = 0;
-	
+	public int l;
+
 	String fileOut = ".\\src\\resources\\output.txt";
 
 	public Main() {
+
+		List<String> lines = Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+				" ", " ", " ", " ", " ", " ", " ", " ", " ");
+
+		try {
+			Files.write(Paths.get(fileOut), lines, Charset.forName("UTF-8"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void writeTitle(String t) {
+		List<String> lines;
+		try {
+			lines = Files.readAllLines(Paths.get(fileOut));
+			lines.set(0, t.toUpperCase());
+			Files.write(Paths.get(fileOut), lines);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void writeAuthor(String t) {
+		List<String> lines;
+		try {
+			lines = Files.readAllLines(Paths.get(fileOut));
+			lines.set(1, t.toUpperCase());
+			Files.write(Paths.get(fileOut), lines);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void writeBar() {
+		write('|', '|', '|', '|', '|', '|', false);
+	}
+
+	public void writeBattuta(int a, int b) {
+		List<String> lines;
+		try {
+			lines = Files.readAllLines(Paths.get(fileOut));
+			lines.set(2, a + "\\" + b);
+			Files.write(Paths.get(fileOut), lines);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -26,23 +82,21 @@ public class Main {
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(fileOut));
 
-			lines.set(0, lines.get(0) + a);
-			lines.set(1, lines.get(1) + b);
-			lines.set(2, lines.get(2) + c);
-			lines.set(3, lines.get(3) + d);
-			lines.set(4, lines.get(4) + e);
-			lines.set(5, lines.get(5) + f);
+			lines.set(5 + l, lines.get(5 + l) + a);
+			lines.set(6 + l, lines.get(6 + l) + b);
+			lines.set(7 + l, lines.get(7 + l) + c);
+			lines.set(8 + l, lines.get(8 + l) + d);
+			lines.set(9 + l, lines.get(9 + l) + e);
+			lines.set(10 + l, lines.get(10 + l) + f);
 
 			Files.write(Paths.get(fileOut), lines);
 
-			if (count == a) {
-				for (int i = 0; i < 6; i++) {
-					lines.set(i, lines.get(i) + "|");
-				}
+			count++;
+			if (count % this.a == 0) {
+				writeBar();
 				count = 0;
 			}
 
-			count++;
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -59,20 +113,15 @@ public class Main {
 		// ReadFile file = new ReadFile(path);
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(fileOut));
-
-			if (count == a) {
-				for (int i = 0; i < 6; i++) {
-					lines.set(i, lines.get(i) + "|");
-				}
-				count = 0;
-			}
-
-			lines.set(0, lines.get(0) + a);
-			lines.set(1, lines.get(1) + b);
-			lines.set(2, lines.get(2) + c);
-			lines.set(3, lines.get(3) + d);
-			lines.set(4, lines.get(4) + e);
-			lines.set(5, lines.get(5) + f);
+			/*
+			 * if (count % a == 0) { count++; writeBar(); count = 0; }
+			 */
+			lines.set(5 + l, lines.get(5 + l) + a);
+			lines.set(6 + l, lines.get(6 + l) + b);
+			lines.set(7 + l, lines.get(7 + l) + c);
+			lines.set(8 + l, lines.get(8 + l) + d);
+			lines.set(9 + l, lines.get(9 + l) + e);
+			lines.set(10 + l, lines.get(10 + l) + f);
 
 			Files.write(Paths.get(fileOut), lines);
 
@@ -83,8 +132,12 @@ public class Main {
 	}
 
 	public void setBattuta(int a, int b) {
-		this.a = a;
+		this.a = 2*a;
 		this.b = b;
+	}
+
+	public void newLine() {
+		l += 8;
 	}
 
 	public void writeNota(int c, int t) {
@@ -112,41 +165,50 @@ public class Main {
 		}
 	}
 
-	public void writeChord(char n) {
+	public void writeChord(String n) {
 		switch (n) {
-		case 'C':
-			write('-', '3', '2', '0', '1', '0');
+		case "C":
+			write('0', '1', '0', '2', '3', '-');
 			break;
-		case 'D':
-			write('-', '-', '0', '2', '3', '2');
+		case "D":
+			write('2', '3', '2', '0', '-', '-');
 			break;
-		case 'E':
-			write('0', '2', '2', '1', '0', '0');
+		case "E":
+			write('0', '0', '1', '2', '2', '0');
 			break;
-		case 'F':
-			write('1', '3', '3', '2', '1', '1');
+		case "F":
+			write('1', '1', '2', '3', '3', '1');
 			break;
-		case 'G':
-			write('3', '2', '0', '0', '0', '3');
+		case "G":
+			write('3', '0', '0', '0', '2', '3');
 			break;
-		case 'A':
-			write('-', '0', '2', '2', '2', '0');
+		case "A":
+			write('0', '2', '2', '2', '0', '-');
 			break;
-		case 'B':
-			write('-', '2', '4', '4', '4', '2');
+		case "B":
+			write('2', '4', '4', '4', '2', '-');
 			break;
 		default:
 			break;
 		}
 	}
 
-	public void writePowerchord(char n) {
-		// TODO
+	public void writePowerchord(int c, int t) {
+		switch (c) {
+		case 5:
+			write('-', Character.forDigit(t, 10), Character.forDigit(t + 2, 10), Character.forDigit(t + 2, 10), '-',
+					'-');
+			break;
+		case 6:
+			write(Character.forDigit(t, 10), Character.forDigit(t + 2, 10), Character.forDigit(t + 2, 10), '-', '-',
+					'-');
+			break;
+		}
+
 	}
 
-	public void writeStrumming(int a, int b, int c, int d, int e, int f) {
-		write(Character.forDigit(a, 10), Character.forDigit(b, 10), Character.forDigit(c, 10),
-				Character.forDigit(d, 10), Character.forDigit(e, 10), Character.forDigit(f, 10));
+	public void writeStrumming(char a, char b, char c, char d, char e, char f) {
+		write(f,e,d,c,b,a);
 	}
 
 	public void writeSlideup(int c, int t1, int t2) {
@@ -391,7 +453,7 @@ public class Main {
 		// p
 		switch (c) {
 		case 1:
-			write('-', '-', '-', '-', '-', 'p' , false);
+			write('-', '-', '-', '-', '-', 'p', false);
 			break;
 		case 2:
 			write('-', '-', '-', '-', 'p', '-', false);
@@ -435,4 +497,11 @@ public class Main {
 		}
 	}
 
+	void writePause() {
+		write('-', '-', '-', '-', '-', '-');
+	}
+
+	void writePauseG() {
+		write('-', '-', '-', '-', '-', '-', false);
+	}
 }
