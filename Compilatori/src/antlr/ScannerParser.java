@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g 2016-05-20 09:43:07
+// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g 2016-05-25 12:10:35
 
 package antlr;
     import util.*;
@@ -72,7 +72,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return ScannerParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g"; }
 
 
     Main principale;
@@ -99,7 +99,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "start"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:36:1: start : START title ( author )? bar ( sound )* ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:36:1: start : START title ( author )? bar ( sound )* ;
     public final ScannerParser.start_return start() throws RecognitionException {
         ScannerParser.start_return retval = new ScannerParser.start_return();
         retval.start = input.LT(1);
@@ -123,8 +123,8 @@ public TreeAdaptor getTreeAdaptor() {
         init();
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:40:3: ( START title ( author )? bar ( sound )* )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:41:3: START title ( author )? bar ( sound )*
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:40:3: ( START title ( author )? bar ( sound )* )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:41:3: START title ( author )? bar ( sound )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -143,7 +143,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, title2.getTree());
 
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:41:15: ( author )?
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:41:15: ( author )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -152,7 +152,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt1) {
                 case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:41:15: author
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:41:15: author
                     {
                     pushFollow(FOLLOW_author_in_start85);
                     author3=author();
@@ -174,7 +174,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, bar4.getTree());
 
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:41:27: ( sound )*
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:41:27: ( sound )*
             loop2:
             do {
                 int alt2=2;
@@ -187,7 +187,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:41:27: sound
+            	    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:41:27: sound
             	    {
             	    pushFollow(FOLLOW_sound_in_start90);
             	    sound5=sound();
@@ -236,7 +236,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "sound"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:44:1: sound : ( note | chord | powerchord | strumming | slideup | slidedown | hammer | pulloff | pause | pause_g | newline );
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:44:1: sound : ( note | chord | powerchord | strumming | slideup | slidedown | hammer | pulloff | pause | pause_g | newline );
     public final ScannerParser.sound_return sound() throws RecognitionException {
         ScannerParser.sound_return retval = new ScannerParser.sound_return();
         retval.start = input.LT(1);
@@ -269,7 +269,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:45:3: ( note | chord | powerchord | strumming | slideup | slidedown | hammer | pulloff | pause | pause_g | newline )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:45:3: ( note | chord | powerchord | strumming | slideup | slidedown | hammer | pulloff | pause | pause_g | newline )
             int alt3=11;
             switch ( input.LA(1) ) {
             case NOTE_D:
@@ -337,7 +337,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:46:3: note
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:46:3: note
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -352,7 +352,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:47:5: chord
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:47:5: chord
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -367,7 +367,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:48:5: powerchord
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:48:5: powerchord
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -382,7 +382,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:49:5: strumming
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:49:5: strumming
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -397,7 +397,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:50:5: slideup
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:50:5: slideup
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -412,7 +412,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:51:5: slidedown
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:51:5: slidedown
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -427,7 +427,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:52:5: hammer
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:52:5: hammer
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -442,7 +442,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:53:5: pulloff
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:53:5: pulloff
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -457,7 +457,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:54:5: pause
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:54:5: pause
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -472,7 +472,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:55:5: pause_g
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:55:5: pause_g
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -487,7 +487,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:56:5: newline
+                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:56:5: newline
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -532,7 +532,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "author"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:59:1: author : AUTHOR '(' t= WORD ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:59:1: author : AUTHOR '(' t= WORD ')' ;
     public final ScannerParser.author_return author() throws RecognitionException {
         ScannerParser.author_return retval = new ScannerParser.author_return();
         retval.start = input.LT(1);
@@ -551,8 +551,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal19_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:60:3: ( AUTHOR '(' t= WORD ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:61:3: AUTHOR '(' t= WORD ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:60:3: ( AUTHOR '(' t= WORD ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:61:3: AUTHOR '(' t= WORD ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -620,7 +620,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "bar"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:68:1: bar : BAR '(' a= INT '/' b= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:68:1: bar : BAR '(' a= INT '/' b= INT ')' ;
     public final ScannerParser.bar_return bar() throws RecognitionException {
         ScannerParser.bar_return retval = new ScannerParser.bar_return();
         retval.start = input.LT(1);
@@ -643,8 +643,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal23_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:69:3: ( BAR '(' a= INT '/' b= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:70:3: BAR '(' a= INT '/' b= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:69:3: ( BAR '(' a= INT '/' b= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:70:3: BAR '(' a= INT '/' b= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -728,7 +728,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "newline"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:79:1: newline : NEWLINE '()' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:79:1: newline : NEWLINE '()' ;
     public final ScannerParser.newline_return newline() throws RecognitionException {
         ScannerParser.newline_return retval = new ScannerParser.newline_return();
         retval.start = input.LT(1);
@@ -743,8 +743,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object string_literal25_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:80:3: ( NEWLINE '()' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:81:3: NEWLINE '()'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:80:3: ( NEWLINE '()' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:81:3: NEWLINE '()'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -799,7 +799,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "title"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:89:1: title : TITLE '(' t= WORD ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:89:1: title : TITLE '(' t= WORD ')' ;
     public final ScannerParser.title_return title() throws RecognitionException {
         ScannerParser.title_return retval = new ScannerParser.title_return();
         retval.start = input.LT(1);
@@ -818,8 +818,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal28_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:90:3: ( TITLE '(' t= WORD ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:91:3: TITLE '(' t= WORD ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:90:3: ( TITLE '(' t= WORD ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:91:3: TITLE '(' t= WORD ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -887,7 +887,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "note"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:98:1: note : NOTE_D '(' c= INT ',' t= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:98:1: note : NOTE_D '(' c= INT ',' t= INT ')' ;
     public final ScannerParser.note_return note() throws RecognitionException {
         ScannerParser.note_return retval = new ScannerParser.note_return();
         retval.start = input.LT(1);
@@ -910,8 +910,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal32_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:99:3: ( NOTE_D '(' c= INT ',' t= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:100:3: NOTE_D '(' c= INT ',' t= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:99:3: ( NOTE_D '(' c= INT ',' t= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:100:3: NOTE_D '(' c= INT ',' t= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -993,7 +993,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "chord"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:106:1: chord : CHORD '(' n= NOTE ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:106:1: chord : CHORD '(' n= NOTE ')' ;
     public final ScannerParser.chord_return chord() throws RecognitionException {
         ScannerParser.chord_return retval = new ScannerParser.chord_return();
         retval.start = input.LT(1);
@@ -1012,8 +1012,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal35_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:107:3: ( CHORD '(' n= NOTE ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:108:3: CHORD '(' n= NOTE ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:107:3: ( CHORD '(' n= NOTE ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:108:3: CHORD '(' n= NOTE ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1081,7 +1081,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "powerchord"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:114:1: powerchord : POWERCHORD '(' c= INT ',' t= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:114:1: powerchord : POWERCHORD '(' c= INT ',' t= INT ')' ;
     public final ScannerParser.powerchord_return powerchord() throws RecognitionException {
         ScannerParser.powerchord_return retval = new ScannerParser.powerchord_return();
         retval.start = input.LT(1);
@@ -1104,8 +1104,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal39_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:115:3: ( POWERCHORD '(' c= INT ',' t= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:116:3: POWERCHORD '(' c= INT ',' t= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:115:3: ( POWERCHORD '(' c= INT ',' t= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:116:3: POWERCHORD '(' c= INT ',' t= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1187,7 +1187,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "strumming"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:122:1: strumming : STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:122:1: strumming : STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')' ;
     public final ScannerParser.strumming_return strumming() throws RecognitionException {
         ScannerParser.strumming_return retval = new ScannerParser.strumming_return();
         retval.start = input.LT(1);
@@ -1226,8 +1226,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal47_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:123:3: ( STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:124:3: STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:123:3: ( STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:124:3: STRUMMING '(' a= INT ',' b= INT ',' c= INT ',' d= INT ',' e= INT ',' f= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1366,7 +1366,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "slideup"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:131:1: slideup : SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:131:1: slideup : SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')' ;
     public final ScannerParser.slideup_return slideup() throws RecognitionException {
         ScannerParser.slideup_return retval = new ScannerParser.slideup_return();
         retval.start = input.LT(1);
@@ -1393,8 +1393,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal52_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:132:3: ( SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:133:3: SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:132:3: ( SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:133:3: SLIDEUP '(' c= INT ',' t1= INT ',' t2= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1490,7 +1490,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "slidedown"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:139:1: slidedown : SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:139:1: slidedown : SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')' ;
     public final ScannerParser.slidedown_return slidedown() throws RecognitionException {
         ScannerParser.slidedown_return retval = new ScannerParser.slidedown_return();
         retval.start = input.LT(1);
@@ -1517,8 +1517,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal57_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:140:3: ( SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:141:3: SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:140:3: ( SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:141:3: SLIDEDOWN '(' c= INT ',' t1= INT ',' t2= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1614,7 +1614,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "hammer"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:147:1: hammer : HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:147:1: hammer : HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')' ;
     public final ScannerParser.hammer_return hammer() throws RecognitionException {
         ScannerParser.hammer_return retval = new ScannerParser.hammer_return();
         retval.start = input.LT(1);
@@ -1641,8 +1641,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal62_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:148:3: ( HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:149:3: HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:148:3: ( HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:149:3: HAMMER '(' c= INT ',' t1= INT ',' t2= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1738,7 +1738,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "pause"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:155:1: pause : PAUSE '()' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:155:1: pause : PAUSE '()' ;
     public final ScannerParser.pause_return pause() throws RecognitionException {
         ScannerParser.pause_return retval = new ScannerParser.pause_return();
         retval.start = input.LT(1);
@@ -1753,8 +1753,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object string_literal64_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:156:3: ( PAUSE '()' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:157:3: PAUSE '()'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:156:3: ( PAUSE '()' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:157:3: PAUSE '()'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1808,7 +1808,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "pause_g"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:164:1: pause_g : PAUSE_G '()' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:164:1: pause_g : PAUSE_G '()' ;
     public final ScannerParser.pause_g_return pause_g() throws RecognitionException {
         ScannerParser.pause_g_return retval = new ScannerParser.pause_g_return();
         retval.start = input.LT(1);
@@ -1823,8 +1823,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object string_literal66_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:165:3: ( PAUSE_G '()' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:166:3: PAUSE_G '()'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:165:3: ( PAUSE_G '()' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:166:3: PAUSE_G '()'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1878,7 +1878,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "pulloff"
-    // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:173:1: pulloff : PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')' ;
+    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:173:1: pulloff : PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')' ;
     public final ScannerParser.pulloff_return pulloff() throws RecognitionException {
         ScannerParser.pulloff_return retval = new ScannerParser.pulloff_return();
         retval.start = input.LT(1);
@@ -1905,8 +1905,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal71_tree=null;
 
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:174:3: ( PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori\\Compilatori\\src\\Scanner.g:175:3: PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')'
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:174:3: ( PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')' )
+            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:175:3: PULLOFF '(' c= INT ',' t1= INT ',' t2= INT ')'
             {
             root_0 = (Object)adaptor.nil();
 

@@ -1,6 +1,8 @@
 package antlr;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,10 +15,23 @@ public class Main {
 	public int b;
 	public int count = 0;
 	public int l;
+	String fileOut = null;//".\\src\\resources\\output.txt";
 
-	String fileOut = ".\\src\\resources\\output.txt";
 
 	public Main() {
+		//String fileOut = ".\\src\\resources\\output.txt";
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	  	
+		 System.out.println("Insert Output File Relative Path:");
+		String s2 = null;
+		try {
+			s2 = br.readLine();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	    fileOut=".\\"+s2;
 
 		List<String> lines = Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
 				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",

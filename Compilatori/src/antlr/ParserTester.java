@@ -1,23 +1,37 @@
 package antlr;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import org.antlr.runtime.*;
 
 
 public class ParserTester  {
 	static ScannerParser parser;
+	public String fout;
   
+	
 	public static void main(String[] args) {
 		CommonTokenStream tokens;
-  	String fileIn = ".\\src\\resources\\input.file";
+  String fileIn = ".\\src\\resources\\input.file";
   	String fileOut1 = ".\\src\\resources\\parser.ANTLR.out.txt";
 //  	String fileOut2 = ".\\resources\\parser.JFLEX.out.txt";
   	String fileErr1 = ".\\src\\resources\\parser.ANTLR.err.txt";
 //  	String fileErr2 = ".\\resources\\parser.JFLEX.err.txt";
+  	
+  	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  	System.out.println("Insert Input File Relative Path:");
+    try {
+		String s1 = br.readLine();
+	fileIn=".\\"+s1;
 
+    } catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 		try {
 			System.out.println ("Parsing con ANTLR lexer");
 			System.out.println ("-----------------------");
