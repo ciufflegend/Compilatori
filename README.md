@@ -1,7 +1,9 @@
 # TabCoding
 
-Hello. Can you here me!?
-For everything please refer to the official Wiki 
+Hello there and welcome to the TabCoding git page!
+On this page you'll find the source code and the compiled jar.
+
+For every doubt please refer to the official Wiki 
 https://github.com/ciufflegend/Compilatori/wiki
 
 Have fun =D
