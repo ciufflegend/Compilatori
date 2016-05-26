@@ -15,15 +15,14 @@ public class Main {
 	public int b;
 	public int count = 0;
 	public int l;
-	String fileOut = null;//".\\src\\resources\\output.txt";
-
+	String fileOut = null;// ".\\src\\resources\\output.txt";
 
 	public Main() {
-		//String fileOut = ".\\src\\resources\\output.txt";
-		
+		// String fileOut = ".\\src\\resources\\output.txt";
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	  	
-		 System.out.println("Insert Output File Relative Path:");
+
+		System.out.println("Insert Output File Relative Path:");
 		String s2 = null;
 		try {
 			s2 = br.readLine();
@@ -31,7 +30,7 @@ public class Main {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-	    fileOut=".\\"+s2;
+		fileOut = ".\\" + s2;
 
 		List<String> lines = Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
 				" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
@@ -92,7 +91,6 @@ public class Main {
 	}
 
 	public void write(char a, char b, char c, char d, char e, char f) {
-
 		// ReadFile file = new ReadFile(path);
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(fileOut));
@@ -147,7 +145,7 @@ public class Main {
 	}
 
 	public void setBattuta(int a, int b) {
-		this.a = 2*a;
+		this.a = 2 * a;
 		this.b = b;
 	}
 
@@ -156,6 +154,8 @@ public class Main {
 	}
 
 	public void writeNota(int c, int t) {
+		if (c > 6 || c < 1 || t < 0 || t > 9)
+			return;
 		switch (c) {
 		case 1:
 			write('-', '-', '-', '-', '-', Character.forDigit(t, 10));
@@ -209,6 +209,8 @@ public class Main {
 	}
 
 	public void writePowerchord(int c, int t) {
+		if (c != 5 || c != 6 || t < 0 || t > 9)
+			return;
 		switch (c) {
 		case 5:
 			write('-', Character.forDigit(t, 10), Character.forDigit(t + 2, 10), Character.forDigit(t + 2, 10), '-',
@@ -223,11 +225,24 @@ public class Main {
 	}
 
 	public void writeStrumming(char a, char b, char c, char d, char e, char f) {
-		write(f,e,d,c,b,a);
+		if (Character.getNumericValue(a) < 0 || Character.getNumericValue(a) > 9)
+			return;
+		if (Character.getNumericValue(b) < 0 || Character.getNumericValue(b) > 9)
+			return;
+		if (Character.getNumericValue(c) < 0 || Character.getNumericValue(c) > 9)
+			return;
+		if (Character.getNumericValue(d) < 0 || Character.getNumericValue(d) > 9)
+			return;
+		if (Character.getNumericValue(e) < 0 || Character.getNumericValue(e) > 9)
+			return;
+		if (Character.getNumericValue(f) < 0 || Character.getNumericValue(f) > 9)
+			return;
+		write(f, e, d, c, b, a);
 	}
 
 	public void writeSlideup(int c, int t1, int t2) {
-
+		if (c > 6 || c < 1 || t1 < 0 || t1 > 9 || t2 < 0 || t2 > 9)
+			return;
 		// prima nota
 		switch (c) {
 		case 1:
@@ -300,6 +315,8 @@ public class Main {
 	}
 
 	public void writeSlidedown(int c, int t1, int t2) {
+		if (c > 6 || c < 1 || t1 < 0 || t1 > 9 || t2 < 0 || t2 > 9)
+			return;
 		// prima nota
 		switch (c) {
 		case 1:
@@ -371,6 +388,8 @@ public class Main {
 	}
 
 	public void writeHammer(int c, int t1, int t2) {
+		if (c > 6 || c < 1 || t1 < 0 || t1 > 9 || t2 < 0 || t2 > 9)
+			return;
 		// prima nota
 		switch (c) {
 		case 1:
@@ -442,6 +461,8 @@ public class Main {
 	}
 
 	public void writePulloff(int c, int t1, int t2) {
+		if (c > 6 || c < 1 || t1 < 0 || t1 > 9 || t2 < 0 || t2 > 9)
+			return;
 		// prima nota
 		switch (c) {
 		case 1:
