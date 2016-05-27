@@ -63,7 +63,7 @@ public class ParserTester  {
    System.out.println ("Parsing completato con successo\n\n");
    else 
    System.out.println ("Parsing completato con " + parser.getErrors().size() + " errori semantici\n\n");
-
+/*
     FileWriter fOut = new FileWriter (fileOut);
   	fOut.append(parser.getTranslation());
     fOut.close();
@@ -72,5 +72,6 @@ public class ParserTester  {
   //	for (int i=0; i<parser.getErrors().size(); i++)
   //		fOut.append((i+1) + ":" + parser.getErrors().get(i) + "\n");    	
     fOut.close();
+    */
   }
 }

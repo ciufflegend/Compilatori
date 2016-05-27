@@ -225,6 +225,7 @@ public class Main {
 	}
 
 	public void writeStrumming(char a, char b, char c, char d, char e, char f) {
+		
 		if (Character.getNumericValue(a) < 0 || Character.getNumericValue(a) > 9)
 			return;
 		if (Character.getNumericValue(b) < 0 || Character.getNumericValue(b) > 9)
@@ -237,6 +238,7 @@ public class Main {
 			return;
 		if (Character.getNumericValue(f) < 0 || Character.getNumericValue(f) > 9)
 			return;
+		
 		write(f, e, d, c, b, a);
 	}
 
