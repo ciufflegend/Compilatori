@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g 2016-05-25 12:10:36
+// $ANTLR 3.4 C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g 2016-06-01 08:46:31
 
 package antlr;
 
@@ -53,15 +53,15 @@ public class ScannerLexer extends Lexer {
     public ScannerLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g"; }
 
     // $ANTLR start "T__27"
     public final void mT__27() throws RecognitionException {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:11:7: ( '(' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:11:9: '('
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:11:7: ( '(' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:11:9: '('
             {
             match('('); 
 
@@ -81,8 +81,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:12:7: ( '()' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:12:9: '()'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:12:7: ( '()' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:12:9: '()'
             {
             match("()"); 
 
@@ -104,8 +104,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:13:7: ( ')' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:13:9: ')'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:13:7: ( ')' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:13:9: ')'
             {
             match(')'); 
 
@@ -125,8 +125,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:14:7: ( ',' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:14:9: ','
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:14:7: ( ',' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:14:9: ','
             {
             match(','); 
 
@@ -146,8 +146,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:15:7: ( '/' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:15:9: '/'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:15:7: ( '/' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:15:9: '/'
             {
             match('/'); 
 
@@ -165,8 +165,8 @@ public class ScannerLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:184:3: ( '0' .. '9' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:184:3: ( '0' .. '9' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -191,8 +191,8 @@ public class ScannerLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:190:3: ( 'a' .. 'z' | '_' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:190:3: ( 'a' .. 'z' | '_' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
             {
             if ( input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -219,7 +219,7 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:194:3: ( ( DIGIT )+ | '-' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:194:3: ( ( DIGIT )+ | '-' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -238,9 +238,9 @@ public class ScannerLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:195:3: ( DIGIT )+
+                    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:195:3: ( DIGIT )+
                     {
-                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:195:3: ( DIGIT )+
+                    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:195:3: ( DIGIT )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -254,7 +254,7 @@ public class ScannerLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+                    	    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
                     	    {
                     	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                     	        input.consume();
@@ -282,7 +282,7 @@ public class ScannerLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:196:5: '-'
+                    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:196:5: '-'
                     {
                     match('-'); 
 
@@ -304,10 +304,10 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:200:3: ( ( LETTER )* )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:201:3: ( LETTER )*
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:200:3: ( ( LETTER )* )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:201:3: ( LETTER )*
             {
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:201:3: ( LETTER )*
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:201:3: ( LETTER )*
             loop3:
             do {
                 int alt3=2;
@@ -320,7 +320,7 @@ public class ScannerLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+            	    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
             	    {
             	    if ( input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -357,8 +357,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = NOTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:205:3: ( 'A' .. 'G' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:205:3: ( 'A' .. 'G' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'G') ) {
                 input.consume();
@@ -386,8 +386,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = NOTE_D;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:210:3: ( 'NOTE' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:211:3: 'NOTE'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:210:3: ( 'NOTE' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:211:3: 'NOTE'
             {
             match("NOTE"); 
 
@@ -409,8 +409,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = START;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:215:3: ( 'START' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:216:3: 'START'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:215:3: ( 'START' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:216:3: 'START'
             {
             match("START"); 
 
@@ -432,8 +432,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = BAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:220:3: ( 'BAR' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:221:3: 'BAR'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:220:3: ( 'BAR' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:221:3: 'BAR'
             {
             match("BAR"); 
 
@@ -455,8 +455,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = CHORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:225:3: ( 'CHORD' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:226:3: 'CHORD'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:225:3: ( 'CHORD' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:226:3: 'CHORD'
             {
             match("CHORD"); 
 
@@ -478,8 +478,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = POWERCHORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:230:3: ( 'POWERCHORD' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:231:3: 'POWERCHORD'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:230:3: ( 'POWERCHORD' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:231:3: 'POWERCHORD'
             {
             match("POWERCHORD"); 
 
@@ -501,8 +501,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = STRUMMING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:235:3: ( 'STRUMMING' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:236:3: 'STRUMMING'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:235:3: ( 'STRUMMING' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:236:3: 'STRUMMING'
             {
             match("STRUMMING"); 
 
@@ -524,8 +524,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = SLIDEUP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:240:3: ( 'SLIDEUP' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:241:3: 'SLIDEUP'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:240:3: ( 'SLIDEUP' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:241:3: 'SLIDEUP'
             {
             match("SLIDEUP"); 
 
@@ -547,8 +547,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = SLIDEDOWN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:245:3: ( 'SLIDEDOWN' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:246:3: 'SLIDEDOWN'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:245:3: ( 'SLIDEDOWN' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:246:3: 'SLIDEDOWN'
             {
             match("SLIDEDOWN"); 
 
@@ -570,8 +570,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = HAMMER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:250:3: ( 'HAMMER' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:251:3: 'HAMMER'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:250:3: ( 'HAMMER' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:251:3: 'HAMMER'
             {
             match("HAMMER"); 
 
@@ -593,8 +593,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = PULLOFF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:255:3: ( 'PULLOFF' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:256:3: 'PULLOFF'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:255:3: ( 'PULLOFF' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:256:3: 'PULLOFF'
             {
             match("PULLOFF"); 
 
@@ -616,8 +616,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = PAUSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:260:3: ( 'PAUSE' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:261:3: 'PAUSE'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:260:3: ( 'PAUSE' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:261:3: 'PAUSE'
             {
             match("PAUSE"); 
 
@@ -639,8 +639,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = PAUSE_G;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:265:3: ( 'PAUSE_G' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:266:3: 'PAUSE_G'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:265:3: ( 'PAUSE_G' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:266:3: 'PAUSE_G'
             {
             match("PAUSE_G"); 
 
@@ -662,8 +662,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = TITLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:270:3: ( 'TITLE' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:271:3: 'TITLE'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:270:3: ( 'TITLE' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:271:3: 'TITLE'
             {
             match("TITLE"); 
 
@@ -685,8 +685,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:275:3: ( 'LINE' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:276:3: 'LINE'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:275:3: ( 'LINE' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:276:3: 'LINE'
             {
             match("LINE"); 
 
@@ -708,8 +708,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = AUTHOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:280:3: ( 'AUTHOR' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:281:3: 'AUTHOR'
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:280:3: ( 'AUTHOR' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:281:3: 'AUTHOR'
             {
             match("AUTHOR"); 
 
@@ -731,12 +731,12 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:285:3: ( '\\'' ( . )* '\\'' )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:286:3: '\\'' ( . )* '\\''
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:285:3: ( '\\'' ( . )* '\\'' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:286:3: '\\'' ( . )* '\\''
             {
             match('\''); 
 
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:286:8: ( . )*
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:286:8: ( . )*
             loop4:
             do {
                 int alt4=2;
@@ -752,7 +752,7 @@ public class ScannerLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:286:8: .
+            	    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:286:8: .
             	    {
             	    matchAny(); 
 
@@ -783,13 +783,13 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:290:3: ( LETTER ( LETTER | DIGIT )* )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:291:3: LETTER ( LETTER | DIGIT )*
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:290:3: ( LETTER ( LETTER | DIGIT )* )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:291:3: LETTER ( LETTER | DIGIT )*
             {
             mLETTER(); 
 
 
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:292:3: ( LETTER | DIGIT )*
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:292:3: ( LETTER | DIGIT )*
             loop5:
             do {
                 int alt5=2;
@@ -802,7 +802,7 @@ public class ScannerLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:
+            	    // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -839,8 +839,8 @@ public class ScannerLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:299:3: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:300:3: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:299:3: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:300:3: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -869,12 +869,12 @@ public class ScannerLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | INT | WORD | NOTE | NOTE_D | START | BAR | CHORD | POWERCHORD | STRUMMING | SLIDEUP | SLIDEDOWN | HAMMER | PULLOFF | PAUSE | PAUSE_G | TITLE | NEWLINE | AUTHOR | STRING_LITERAL | IDENT | WS )
+        // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | INT | WORD | NOTE | NOTE_D | START | BAR | CHORD | POWERCHORD | STRUMMING | SLIDEUP | SLIDEDOWN | HAMMER | PULLOFF | PAUSE | PAUSE_G | TITLE | NEWLINE | AUTHOR | STRING_LITERAL | IDENT | WS )
         int alt6=26;
         alt6 = dfa6.predict(input);
         switch (alt6) {
             case 1 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:10: T__27
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:10: T__27
                 {
                 mT__27(); 
 
@@ -882,7 +882,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:16: T__28
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:16: T__28
                 {
                 mT__28(); 
 
@@ -890,7 +890,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:22: T__29
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:22: T__29
                 {
                 mT__29(); 
 
@@ -898,7 +898,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:28: T__30
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:28: T__30
                 {
                 mT__30(); 
 
@@ -906,7 +906,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:34: T__31
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:34: T__31
                 {
                 mT__31(); 
 
@@ -914,7 +914,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:40: INT
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:40: INT
                 {
                 mINT(); 
 
@@ -922,7 +922,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:44: WORD
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:44: WORD
                 {
                 mWORD(); 
 
@@ -930,7 +930,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:49: NOTE
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:49: NOTE
                 {
                 mNOTE(); 
 
@@ -938,7 +938,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:54: NOTE_D
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:54: NOTE_D
                 {
                 mNOTE_D(); 
 
@@ -946,7 +946,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:61: START
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:61: START
                 {
                 mSTART(); 
 
@@ -954,7 +954,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:67: BAR
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:67: BAR
                 {
                 mBAR(); 
 
@@ -962,7 +962,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:71: CHORD
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:71: CHORD
                 {
                 mCHORD(); 
 
@@ -970,7 +970,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:77: POWERCHORD
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:77: POWERCHORD
                 {
                 mPOWERCHORD(); 
 
@@ -978,7 +978,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:88: STRUMMING
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:88: STRUMMING
                 {
                 mSTRUMMING(); 
 
@@ -986,7 +986,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:98: SLIDEUP
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:98: SLIDEUP
                 {
                 mSLIDEUP(); 
 
@@ -994,7 +994,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:106: SLIDEDOWN
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:106: SLIDEDOWN
                 {
                 mSLIDEDOWN(); 
 
@@ -1002,7 +1002,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:116: HAMMER
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:116: HAMMER
                 {
                 mHAMMER(); 
 
@@ -1010,7 +1010,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:123: PULLOFF
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:123: PULLOFF
                 {
                 mPULLOFF(); 
 
@@ -1018,7 +1018,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:131: PAUSE
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:131: PAUSE
                 {
                 mPAUSE(); 
 
@@ -1026,7 +1026,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:137: PAUSE_G
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:137: PAUSE_G
                 {
                 mPAUSE_G(); 
 
@@ -1034,7 +1034,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:145: TITLE
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:145: TITLE
                 {
                 mTITLE(); 
 
@@ -1042,7 +1042,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:151: NEWLINE
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:151: NEWLINE
                 {
                 mNEWLINE(); 
 
@@ -1050,7 +1050,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:159: AUTHOR
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:159: AUTHOR
                 {
                 mAUTHOR(); 
 
@@ -1058,7 +1058,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:166: STRING_LITERAL
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:166: STRING_LITERAL
                 {
                 mSTRING_LITERAL(); 
 
@@ -1066,7 +1066,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:181: IDENT
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:181: IDENT
                 {
                 mIDENT(); 
 
@@ -1074,7 +1074,7 @@ public class ScannerLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // C:\\Users\\ciuff\\git\\Compilatori_\\Compilatori\\src\\Scanner.g:1:187: WS
+                // C:\\Users\\andre\\git\\TabCoding\\Compilatori\\src\\Scanner.g:1:187: WS
                 {
                 mWS(); 
 

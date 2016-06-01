@@ -11,10 +11,10 @@ import java.util.List;
 
 public class Main {
 
-	public int a;
-	public int b;
+	public int a; //numeratore battuta
+	public int b; //denominatore battuta
 	public int count = 0;
-	public int l;
+	public int l; //line in cui si sta scrivendo
 	String fileOut = null;// ".\\src\\resources\\output.txt";
 
 	public Main() {
